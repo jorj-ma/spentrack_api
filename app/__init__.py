@@ -33,9 +33,10 @@ def create_app(config_class=Config):
 
     from app.routes.auth import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
-
     from app.routes.categories import categories_bp
     app.register_blueprint(categories_bp, url_prefix='/api/categories')
+    from app.routes.dashboard import dashboard_bp
+    app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
 
     from app import models
 
