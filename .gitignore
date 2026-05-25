@@ -216,3 +216,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python environment files
+venv/
+.venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuration & Secrets
+.env
+
+# Local Databases
+instance/
+*.db
+*.sqlite3
+
+# Ide Specific Files
+.vscode/
+.idea/
