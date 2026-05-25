@@ -34,6 +34,9 @@ def create_app(config_class=Config):
     from app.routes.auth import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
 
+    from app.routes.categories import categories_bp
+    app.register_blueprint(categories_bp, url_prefix='/api/categories')
+
     from app import models
 
     return app
