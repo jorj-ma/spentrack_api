@@ -41,6 +41,8 @@ def create_app(config_class=Config):
     app.register_blueprint(user_bp, url_prefix='/api/user')
     from app.routes.expenses import expenses_bp
     app.register_blueprint(expenses_bp, url_prefix='/api/expenses')
+    from app.routes.budgets import budgets_bp
+    app.register_blueprint(budgets_bp, url_prefix='/api/budgets')
 
     from app import models
 
