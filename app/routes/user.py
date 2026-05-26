@@ -17,7 +17,7 @@ def manage_profile():
 
     if request.method == "PUT":
         data = request.get_json()
-        user.username = data.get("username", user.username)
+        user.name = data.get("name", user.name)
         user.email = data.get("email", user.email)
         db.session.commit()
         return jsonify({"message": "Profile updated!"}), 200
