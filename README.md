@@ -167,6 +167,13 @@ flask db upgrade
 
 ---
 
+## Insert seed data
+
+```bash
+python3 seed.py
+```
+
+---
 # Running The Server
 
 ```bash
