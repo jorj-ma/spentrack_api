@@ -11,6 +11,8 @@ user_bp = Blueprint("user", __name__)
 def manage_profile():
     current_user_id = get_jwt_identity()
     user = User.query.get(current_user_id)
+    if not user:
+        return jsonify({"message": "User not found"}), 404
 
     if request.method == "GET":
         return jsonify({"username": user.name, "email": user.email}), 200
